@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+::-webkit-scrollbar
+{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb
+{
+    background: #370076;
+	border-radius: 50px;
+}
+::-webkit-scrollbar-track
+{
+	height: 10px;
+  background: linear-gradient(#FFEFBA,#FFFFFF);
+}
+body {
+	overflow-x: hidden;
+	background:linear-gradient(#FFEFBA ,#FFFFFF );
+    background-repeat:repeat-y;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+}
+* {
+	box-sizing: border-box;
+	transition: .25s all ease;
+}
+h1
+{
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+    font-family: 'Supermercado One', cursive;
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+.login-container {
+	display: block;
+	position: relative;
+	z-index: 0;
+	margin: 4rem auto 0;
+  padding: 5rem 4rem 0 4rem;
+	width: 100%;
+	max-width: 525px;
+	min-height: 680px;
+	background-image: linear-gradient(#ad5389,#3c1053);
+	box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.85);
+}
+
+.login-container:after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: radial-gradient(ellipse at left bottom, #03001e 0%,#7303c0 70%, #ec38bc 98%);
+	box-shadow: 0 -20px 150px -20px rgba(0, 0, 0, 0.5);
+}
+
+.form-login {
+	position: relative;
+	z-index: 1;
+  padding-bottom: 4.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.login-nav {
+	position: relative;
+	padding: 0;
+	margin: 0 0 6em 1rem;
+}
+
+.login-nav__item {
+	list-style: none;
+	display: inline-block;
+}
+
+.login-nav__item + .login-nav__item {
+	margin-left: 2.25rem;
+}
+
+.login-nav__item a {
+	position: relative;
+	color: rgba(255, 255, 255, 0.5);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 1.25rem;
+	padding-bottom: .5rem;
+	transition: .20s all ease;
+}
+
+.login-nav__item.active a,
+.login-nav__item a:hover{
+	color: #ffffff;
+	transition: .15s all ease;
+}
+
+.login-nav__item a:after {
+	content: '';
+  display: inline-block;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  right: 100%;
+  bottom: -1px;
+  left: 0;
+  border-radius: 50%;
+  transition: .15s all ease;
+}
+
+.login-nav__item a:hover:after,
+.login-nav__item.active a:after{
+	background-color: rgb(17, 97, 237);
+	height: 2px;
+	right: 0;
+	bottom: 2px;
+	border-radius: 0;
+	transition: .20s all ease;
+}
+.login__label {
+	display: block;
+	padding-left: 1rem;
+}
+
+.login__label,
+.login__label--checkbox {
+	color: rgba(255, 255, 255, 0.5);
+	text-transform: uppercase;
+	font-size: .75rem;
+	margin-bottom: 1rem;
+}
+
+.login__label--checkbox {
+	display: inline-block;
+	position: relative;
+	padding-left: 1.5rem;
+	margin-top: 2rem;
+	margin-left: 1rem;
+	color: #ffffff;
+	font-size: .75rem;
+	text-transform: inherit;
+}
+
+.login__input {
+	color: white;
+	font-size: 1.15rem;
+	width: 100%;
+	padding: .5rem 1rem;
+	border: 2px solid transparent;
+	outline: none;
+	border-radius: 1.5rem;
+	background-color: rgba(255, 255, 255, 0.25);
+	letter-spacing: 1px;
+}
+
+.login__input:hover,
+.login__input:focus{
+	color: white;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	background-color: transparent;
+}
+
+.login__input + .login__label {
+	margin-top: 1.5rem;
+}
+
+.login__input--checkbox {
+	position: absolute;
+	top: .1rem;
+	left: 0;
+	margin: 0;
+}
+
+.login__submit {
+	color: #ffffff;
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 1rem;
+	padding: .75rem;
+	border-radius: 2rem;
+	display: block;
+	width: 100%;
+	background: #d04ed6;
+	border: none;
+	transition: 1s ease;
+	cursor: pointer;
+}
+
+.login__submit:hover {
+	background: #b63cbd;
+}
+.login__forgot a
+{
+	display: block;
+	margin-top: 10px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: .75rem;
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+}
+.login__forgot p
+{
+	display: block;
+	margin-top: 3rem;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: .75rem;
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+}
+
+.login__forgot a:hover ,.login__forgot p:hover {
+	color: rgb(17, 97, 237);
+}
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+svg {
+	font-family: 'Russo One', sans-serif;
+	width: 100%; height: 25vh;
+}
+svg text {
+	text-transform: uppercase;
+	animation: stroke 5s infinite alternate;
+	stroke-width: 2;
+	stroke: #ec38bc;
+	font-size: 140px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(72,138,20,0); stroke: #ec38bc;
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(72,138,20,0); stroke: #ec38bc; }
+	80%  {fill: rgba(72,138,20,0); stroke: #ec38bc; stroke-width: 3; }
+	100% {
+		fill: #ec38bc; stroke: rgba(54,95,160,0); 
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
